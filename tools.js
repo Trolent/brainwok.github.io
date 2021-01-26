@@ -9,6 +9,17 @@ var blocks = [];
 var width = 16384;
 var height = 16384;
 
+let casesCouleur = [
+  ["m48_303837","4.072ap406","rgba(0,255,0,0.3)"], // Kyan
+  ["0b-ennb#5_","bp#_bt!oes","rgba(0,255,0,0.3)"], // Elephant #1
+  ["!r@n#4_een","_e#0lsr$x","rgba(0,255,0,0.3)"], // Elephant #2
+  ["unebonnebo","utique_com","rgba(255,0,0,0.3)"], // Mug UBM
+  ["x0-#o98eyl","_e#_01sr$x","rgba(255,0,0,0.3)"], // Navo
+  ["cp4luiki-f","0cherch@_i","rgba(255,0,0,0.3)"], // Ou est Charlie ?
+  ["$pa.dut0o_","la@_dzol3y","rgba(255,0,0,0.3)"], // Laura Felpin
+  ["44uv-n3!b@","?44n0ns@!m","rgba(255,0,0,0.3)"] // Penelope Bagieu
+];
+
 function stopWheelZoom(event) {
     if (event.ctrlKey == true) {
         event.preventDefault();
@@ -47,13 +58,13 @@ function onMouseMove(e) {
             var text_y = y[block_y];
             tooltip_x.innerText = text_x;
             tooltip_y.innerText = text_y;
-            
+
             // tooltip_x.innerText = block_x;
             // tooltip_y.innerText = block_y;
 
             last_x = block_x;
             last_y = block_y;
-        }    
+        }
     } else {
         tooltip.style.display = "none";
         last_x = -1;
@@ -76,7 +87,7 @@ function createBlockAtPosition(x, y)
 }
 
 function hasBlockAtPosition(x, y) {
-    
+
     blocks.forEach(block => {
         if(block.x == x && block.y == y) return true;
     });
@@ -115,6 +126,14 @@ function makeGrid(gSize) {
       	    let newCell = document.createElement("div");
  			row.appendChild(newCell).className = "cell";
         }
+    }
+    for (k = 0; k < casesCouleur.length; k++) {
+      let caseX = x.indexOf(casesCouleur[k][0]);
+      let caseY = y.indexOf(casesCouleur[k][1]);
+      if (caseX != -1 && caseY != -1) {
+        let caseEl = document.querySelector(".blocks-container > .gridRow:nth-child("+(caseY + 1).toString()+") > .cell:nth-child("+(caseX + 1).toString()+")");
+        caseEl.style.backgroundColor = casesCouleur[k][2];
+      }
     }
 }
 
