@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <meta name='viewport' 
+    <meta name='viewport'
     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' >
     <title>Où est-il ?</title>
 </head>
@@ -13,7 +13,10 @@
         <div class="x"><i>x:</i> <span id="tooltip_x">0123456789</span></div>
         <div class="y"><i>y:</i> <span id="tooltip_y">0123456789</span></div>
     </div>
-    
+    <div id="search" style="position: fixed; background: white; z-index: 1; bottom: 0px;">
+      <input type="text" placeholder="x" id="searchX">
+      <input type="text" placeholder="y" id="searchY">
+      <button onclick="search()">Chercher</button></div>
     <div class="container">
 
         <div class="image-container">
@@ -35,7 +38,7 @@
                 <img src="q1/visual_15.jpg" class="image">
                 <img src="q1/visual_16.jpg" class="image">
             </div>
-            
+
             <div class="quarter">
                 <img src="q2/visual_01.jpg" class="image">
                 <img src="q2/visual_02.jpg" class="image">
@@ -92,11 +95,20 @@
             </div>
         </div>
         <div class="blocks-container">
-            
+
         </div>
     </div>
 
     <script src="coordinates.js"></script>
     <script src="tools.js"></script>
+    <script type="text/javascript">
+    function search() {
+      let xFound = x.indexOf(document.getElementById("searchX").value);
+      let yFound = y.indexOf(document.getElementById("searchY").value);
+      if (xFound != -1 && yFound != -1) {
+      window.scroll(xFound * 64, yFound * 64);
+      }
+    }
+    </script>
 </body>
 </html>
