@@ -120,7 +120,7 @@ function makeGrid(gSize) {
 
 document.addEventListener("DOMContentLoaded", function() {
     update();
-    makeGrid(64);
+    makeGrid(256);
 });
 
 document.addEventListener("keydown", stopKeyZoom);
