@@ -2,7 +2,7 @@ body,
 html {
     margin: 0;
     padding: 0;
-
+    
     div {
         display: block;
         margin: 0;
@@ -18,6 +18,20 @@ html {
         height: 16384px;
     }
 
+    .cell {
+        box-sizing: border-box;
+        border: 1px solid gray;
+        width: 256px;
+        height: 256px;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .gridRow {
+        margin: 0;
+        height: 256px;
+    }
+    
     .quarter
     {
         position: relative;
