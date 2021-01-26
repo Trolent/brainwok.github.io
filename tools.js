@@ -10,14 +10,14 @@ var width = 16384;
 var height = 16384;
 
 let casesCouleur = [
-  ["m48_303837","4.072ap406","rgba(0,255,0,0.3)"], // Kyan
-  ["0b-ennb#5_","bp#_bt!oes","rgba(0,255,0,0.3)"], // Elephant #1
-  ["!r@n#4_een","_e#0lsr$x","rgba(0,255,0,0.3)"], // Elephant #2
-  ["unebonnebo","utique_com","rgba(255,0,0,0.3)"], // Mug UBM
-  ["x0-#o98eyl","_e#_01sr$x","rgba(255,0,0,0.3)"], // Navo
-  ["cp4luiki-f","0cherch@_i","rgba(255,0,0,0.3)"], // Ou est Charlie ?
-  ["$pa.dut0o_","la@_dzol3y","rgba(255,0,0,0.3)"], // Laura Felpin
-  ["44uv-n3!b@","?44n0ns@!m","rgba(255,0,0,0.3)"] // Penelope Bagieu
+  ["m48_303837","4.072ap406","0,255,0"], // Kyan
+  ["0b-ennb#5_","bp#_bt!oes","0,255,0"], // Elephant #1
+  ["!r@n#4_een","_e#0lsr$x","0,255,0"], // Elephant #2
+  ["unebonnebo","utique_com","255,0,0"], // Mug UBM
+  ["x0-#o98eyl","_e#_01sr$x","255,0,0"], // Navo
+  ["cp4luiki-f","0cherch@_i","255,0,0"], // Ou est Charlie ?
+  ["$pa.dut0o_","la@_dzol3y","255,0,0"], // Laura Felpin
+  ["44uv-n3!b@","?44n0ns@!m","255,0,0"] // Penelope Bagieu
 ];
 
 function stopWheelZoom(event) {
@@ -132,7 +132,8 @@ function makeGrid(gSize) {
       let caseY = y.indexOf(casesCouleur[k][1]);
       if (caseX != -1 && caseY != -1) {
         let caseEl = document.querySelector(".blocks-container > .gridRow:nth-child("+(caseY + 1).toString()+") > .cell:nth-child("+(caseX + 1).toString()+")");
-        caseEl.style.backgroundColor = casesCouleur[k][2];
+        caseEl.style.backgroundColor = "rgba("+casesCouleur[k][2]+",0.3)";
+        caseEl.style.border = "5px solid rgb("+casesCouleur[k][2]+")";
       }
     }
 }
