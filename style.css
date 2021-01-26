@@ -109,4 +109,18 @@ html #tooltip .x i,
 html #tooltip .y i {
   color: #aaa;
 }
+
+.cell {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  width: 256px;
+  height: 256px;
+  display: inline-block;
+  margin: 0;
+}
+
+.gridRow {
+  margin: 0;
+  height: 256px;
+}
 /*# sourceMappingURL=style.css.map */
