@@ -107,8 +107,20 @@ function onMouseOut(e) {
     }
 }
 
+function makeGrid(gSize) {
+    for (j = 0; j < gSize; j++) {
+        let row = document.createElement("div");
+        container.appendChild(row).className = "gridRow";
+        for (i = 0; i < gSize; i++) {
+      	    let newCell = document.createElement("div");
+ 			row.appendChild(newCell).className = "cell";
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     update();
+    makeGrid(64);
 });
 
 document.addEventListener("keydown", stopKeyZoom);
