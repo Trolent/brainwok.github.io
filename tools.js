@@ -36,6 +36,7 @@ let casesCouleur = [
    // Cinéma
     ["iw_.w--gl3","dggwitbkak","255,0,0","Stormtrooper"],
     ["88j7#b5vwm","c8bk#g1v@-","255,0,0","RoboCop"],
+    ["jw.7617hb#","j?0zs!4t5!","255,0,0","Joker"],
    //Animaux
     ["ou.qp#j?q-","mj@7bgjdvy","255,0,0","Chat"],
     ["eqcmr7h3uz","$s?ov-ec_p","255,0,0","Hérissouille"],
@@ -43,6 +44,8 @@ let casesCouleur = [
     ["h-ke-.vy!#","q.!wh5-gvn","255,0,0","Tortisson"],
    //Objets sur la tête
     ["$ltd_4l#2z","c_wfg#4yj3","255,0,0","Sceau sur la tête"],
+    ["7k@z0#zg_n","0cherch@_i","255,0,0","Coupe sur la tête"],
+    ["0##1egj-uj","z_osl$7a5-","255,0,0","Tête dans TV"],
    //Autre
     [".mkz4_9_r$","@z3#_531u!","255,0,0","Pizza"],
     ["7g8nolkfs$","!?#whpqjzr","255,0,0","Homme qui tombe"],
@@ -50,7 +53,11 @@ let casesCouleur = [
     ["ge-9ep9##u","8_$2tl2d1k","255,0,0","Pelleteuse"],
     ["cxus5zni5o","j_h335xqk.","255,0,0","Loupe"],
     ["@l#gy33##e","664--wcane","255,0,0","Oignon"],
-    ["-7g4pvs80.","ahi3yh-lo_","255,0,0","Briques"]
+    ["-7g4pvs80.","ahi3yh-lo_","255,0,0","Briques"],
+    ["uu-2@t.f9u","15#4$-o$z?","255,0,0","PS1"],
+    ["x#0fgrguk6","ti@#t2rm37","255,0,0","Bouclier"],
+    ["h-nmf_!bao","@?dz$mp.#0","255,0,0","Maison"],
+    ["$ka74fb.ve","6qw?ec#kou","255,0,0","Lego Frankenstein"]
 ];
 
 function stopWheelZoom(event) {
@@ -186,7 +193,7 @@ function loadMenu() {
 function clipboardWrite() {
   navigator.permissions.query({name: "clipboard-write"}).then(result => {
     if (result.state == "granted" || result.state == "prompt") {
-      let toCopy = "x: " + tooltip_x.innerText + " |  y: " + tooltip_y.innerText;
+      let toCopy = "\"" + tooltip_x.innerText + "\",\"" + tooltip_y.innerText + "\"";
       navigator.clipboard.writeText(toCopy).then(function() {
         /* clipboard successfully set */
       }, function() {
