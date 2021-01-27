@@ -11,16 +11,33 @@ var width = 16384;
 var height = 16384;
 
 let casesCouleur = [
+//A trouver pour l'énigme
+ //1re recherhce 
   ["m48_303837","4.072ap406","0,255,0"], // Kyan
+ //2e recherche
   ["0b-ennb#5_","bp#_bt!oes","0,255,0"], // Elephant #1
   ["!r@n#4_een","_e#_0lsr$x","0,255,0"], // Elephant #2
   ["22$v#f_-01","vso#_fub-i","0,255,0"], // Elephant #3
+//Refs UBM
   ["unebonnebo","utique_com","255,0,0"], // Mug UBM
   ["x0-#o98eyl","_e#_01sr$x","255,0,0"], // Navo
   ["cp4luiki-f","0cherch@_i","255,0,0"], // Ou est Charlie ?
   ["$pa.dut0o_","la@_dzol3y","255,0,0"], // Laura Felpin
   ["44uv-n3!b@","?44n0ns@!m","255,0,0"], // Penelope Bagieu
-  ["iw_.w--gl3","dggwitbkak","255,0,0"] // Stormtrooper
+//Incrustations
+ // Objets
+  ["7g8nolkfs$","#3$r0m-zat","255,0,0"], // Borne Incendie
+  ["88j7#b5vwm","28#2-8vql0","255,0,0"], // Noix
+  ["88j7#b5vwm","r$tk.t7p2o","255,0,0"], // Chapeau 4 bosses
+ // Déguisements
+  ["17a16_!29#","#h##.5?v#-","255,0,0"], // Déguisement Cône
+  ["#$5#lj_#f_","czo$l.#3s$","255,0,0"], // Déquisement Lampe de Génie
+ // Cinéma
+  ["iw_.w--gl3","dggwitbkak","255,0,0"], // Stormtrooper
+  ["88j7#b5vwm","c8bk#g1v@-","255,0,0"], // RoboCop
+ //Autre
+  [".mkz4_9_r$","@z3#_531u!","255,0,0"], // Pizza
+  ["7g8nolkfs$","!?#whpqjzr","255,0,0"] // Cul de souris ?
 ];
 
 function stopWheelZoom(event) {
