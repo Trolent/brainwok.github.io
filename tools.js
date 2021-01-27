@@ -177,9 +177,23 @@ function makeGrid(gSize) {
 
 function loadMenu() {
   let menu = document.getElementById("obj_menu");
+  menu.style.display = "none";
   for (i = 0; i < casesCouleur.length; i++) {
     menu.insertAdjacentHTML( 'beforeend', "<li><a href=\"#\" onclick=\"scrollToXY(\'"+casesCouleur[i][0]+"\',\'"+casesCouleur[i][1]+"\');return false;\">"+casesCouleur[i][3]+"</a></li>" );
   }
+}
+
+function clipboardWrite() {
+  navigator.permissions.query({name: "clipboard-write"}).then(result => {
+    if (result.state == "granted" || result.state == "prompt") {
+      let toCopy = "x: " + tooltip_x.innerText + " |  y: " + tooltip_y.innerText;
+      navigator.clipboard.writeText(toCopy).then(function() {
+        /* clipboard successfully set */
+      }, function() {
+        /* clipboard write failed */
+      });
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -188,6 +202,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loadMenu();
 });
 
+document.addEventListener("dblclick", clipboardWrite)
 document.addEventListener("keydown", stopKeyZoom);
 document.addEventListener('mousewheel', stopWheelZoom);
 document.addEventListener('DOMMouseScroll', stopWheelZoom);
