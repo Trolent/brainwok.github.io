@@ -26,17 +26,17 @@ let casesCouleur = [
   ["44uv-n3!b@","?44n0ns@!m","255,0,0"], // Penelope Bagieu
 //Incrustations
  // Objets
-  ["7g8nolkfs$","#3$r0m-zat","255,0,0"] // Borne Incendie
-  ["88j7#b5vwm","28#2-8vql0","255,0,0"] // Noix
-  ["88j7#b5vwm","r$tk.t7p2o","255,0,0"] // Chapeau 4 bosses
+  ["7g8nolkfs$","#3$r0m-zat","255,0,0"], // Borne Incendie
+  ["88j7#b5vwm","28#2-8vql0","255,0,0"], // Noix
+  ["88j7#b5vwm","r$tk.t7p2o","255,0,0"], // Chapeau 4 bosses
  // Déguisements
-  ["17a16_!29#","#h##.5?v#-k","255,0,0"] // Déguisement Cône
-  ["#$5#lj_#f_","czo$l.#3s$","255,0,0"] // Déquisement Lampe de Génie
+  ["17a16_!29#","#h##.5?v#-k","255,0,0"], // Déguisement Cône
+  ["#$5#lj_#f_","czo$l.#3s$","255,0,0"], // Déquisement Lampe de Génie
  // Cinéma
-  ["iw_.w--gl3","dggwitbkak","255,0,0"] // Stormtrooper
-  ["88j7#b5vwm","c8bk#g1v@-","255,0,0"] // RoboCop
+  ["iw_.w--gl3","dggwitbkak","255,0,0"], // Stormtrooper
+  ["88j7#b5vwm","c8bk#g1v@-","255,0,0"], // RoboCop
  //Autre
-  [".mkz4_9_r$","@z3#_531u!","255,0,0"] // Pizza
+  [".mkz4_9_r$","@z3#_531u!","255,0,0"], // Pizza
   ["7g8nolkfs$","!?#whpqjzr","255,0,0"] // Cul de souris ?
 ];
 
