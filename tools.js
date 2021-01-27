@@ -88,7 +88,12 @@ let casesCouleur = [
     ["pm7#p9-1u_","-g?a.6nij9","255,0,0","Cierge"],
     ["jbd4sdp27?","cg@e1brp-1","255,0,0","John Travolta"],
     ["gkb#gpj$k_","@gb8u?6$o@","255,0,0","Theo"],
-    ["3#tkhths-m","_e#_0lsr$x","255,0,0","Fauteuil"]
+    ["3#tkhths-m","_e#_0lsr$x","255,0,0","Fauteuil"],
+    ["1r#2dik.l@","8#85bq#evb","255,0,0","Casque Chevalier"],
+    ["-hpwhhe4$h","bw_!88viml","255,0,0","Crevette"],
+    ["6ggcn_ze@$","$-w$_g-?-b","255,0,0","Harry Potter"],
+    ["iw_.w--gl3","9-kuau8ac-","255,0,0","Simon"],
+    ["4g6s-0-0-i","wl3.!z_qru","255,0,0","Guitare"]
 ];
 
 function stopWheelZoom(event) {
