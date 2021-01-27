@@ -30,7 +30,7 @@ let casesCouleur = [
   ["88j7#b5vwm","28#2-8vql0","255,0,0"], // Noix
   ["88j7#b5vwm","r$tk.t7p2o","255,0,0"], // Chapeau 4 bosses
  // Déguisements
-  ["17a16_!29#","#h##.5?v#-k","255,0,0"], // Déguisement Cône
+  ["17a16_!29#","#h##.5?v#-","255,0,0"], // Déguisement Cône
   ["#$5#lj_#f_","czo$l.#3s$","255,0,0"], // Déquisement Lampe de Génie
  // Cinéma
   ["iw_.w--gl3","dggwitbkak","255,0,0"], // Stormtrooper
