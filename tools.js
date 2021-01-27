@@ -1,6 +1,7 @@
 var tooltip = document.getElementById("tooltip");
 var tooltip_x = document.getElementById("tooltip_x");
 var tooltip_y = document.getElementById("tooltip_y");
+var coord = document.getElementById("coord");
 var container = document.getElementsByClassName("blocks-container")[0];
 var last_x = -1;
 var last_y = -1;
@@ -12,7 +13,7 @@ var height = 16384;
 let casesCouleur = [
   ["m48_303837","4.072ap406","0,255,0"], // Kyan
   ["0b-ennb#5_","bp#_bt!oes","0,255,0"], // Elephant #1
-  ["!r@n#4_een","_e#_0lsr$x","0,255,0"], // Elephant #2
+  ["!r@n#4_een","_e#0lsr$x","0,255,0"], // Elephant #2
   ["unebonnebo","utique_com","255,0,0"], // Mug UBM
   ["x0-#o98eyl","_e#_01sr$x","255,0,0"], // Navo
   ["cp4luiki-f","0cherch@_i","255,0,0"], // Ou est Charlie ?
@@ -59,8 +60,7 @@ function onMouseMove(e) {
             tooltip_x.innerText = text_x;
             tooltip_y.innerText = text_y;
 
-            // tooltip_x.innerText = block_x;
-            // tooltip_y.innerText = block_y;
+            coord.innerText = "(" + block_x.toString() + ", " + block_y.toString() + ")";
 
             last_x = block_x;
             last_y = block_y;
