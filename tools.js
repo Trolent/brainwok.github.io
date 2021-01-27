@@ -13,17 +13,17 @@ var height = 16384;
 let casesCouleur = [
 //A trouver pour l'énigme
  //1re recherche
-  ["m48_303837","4.072ap406","0,255,0","Kyan"], // Kyan
+  ["m48_303837","4.072ap406","0,255,0","Kyan"],
  //2e recherche
-  ["0b-ennb#5_","bp#_bt!oes","0,255,0","Éléphant #1"],
-  ["!r@n#4_een","_e#_0lsr$x","0,255,0","Éléphant #2"],
-  ["22$v#f_-01","vso#_fub-i","0,255,0","Éléphant #3"],
+  ["0b-ennb#5_","bp#_bt!oes","0,255,0","Elephant #1"],
+  ["!r@n#4_een","_e#_0lsr$x","0,255,0","Elephant #2"],
+  ["22$v#f_-01","vso#_fub-i","0,255,0","Elephant #3"],
 //Refs UBM
   ["unebonnebo","utique_com","255,0,0","Mug UBM"],
-  ["x0-#o98eyl","_e#_01sr$x","255,0,0","Navo"],
+  ["x0-#o98eyl","_e#_0lsr$x","255,0,0","Navo"],
   ["cp4luiki-f","0cherch@_i","255,0,0","Charlie"],
   ["$pa.dut0o_","la@_dzol3y","255,0,0","Laura Felpin"],
-  ["44uv-n3!b@","?44n0ns@!m","255,0,0","Pénélope Bagieu"],
+  ["44uv-n3!b@","?44n0ns@!m","255,0,0","Penelope Bagieu"],
 //Incrustations
  // Objets
   ["7g8nolkfs$","#3$r0m-zat","255,0,0","Borne Incendie"],
@@ -162,9 +162,17 @@ function makeGrid(gSize) {
     }
 }
 
+function loadMenu() {
+  let menu = document.getElementById("obj_menu");
+  for (i = 0; i < casesCouleur.length; i++) {
+    menu.insertAdjacentHTML( 'beforeend', "<li><a href=\"#\" onclick=\"scrollToXY(\'"+casesCouleur[i][0]+"\',\'"+casesCouleur[i][1]+"\');return false;\">"+casesCouleur[i][3]+"</a></li>" );       
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     update();
     makeGrid(256);
+    loadMenu();
 });
 
 document.addEventListener("keydown", stopKeyZoom);
