@@ -32,12 +32,22 @@ let casesCouleur = [
  // Déguisements
   ["17a16_!29#","#h##.5?v#-","255,0,0","Cône"],
   ["#$5#lj_#f_","czo$l.#3s$","255,0,0","Lampe de Génie"],
+  ["zrpj4x.vh$","sq_9v8ol$#","255,0,0","Bière Corona"],
  // Cinéma
   ["iw_.w--gl3","dggwitbkak","255,0,0","Stormtrooper"],
   ["88j7#b5vwm","c8bk#g1v@-","255,0,0","RoboCop"],
+ //Animaux
+  ["ou.qp#j?q-","mj@7bgjdvy","255,0,0","Chat"],
+ //Objets sur la tête
+  ["$ltd_4l#2z","c_wfg#4yj3","255,0,0","Sceau sur la tête"]
  //Autre
   [".mkz4_9_r$","@z3#_531u!","255,0,0","Pizza"],
-  ["7g8nolkfs$","!?#whpqjzr","255,0,0","Cul de souris ?"]
+  ["7g8nolkfs$","!?#whpqjzr","255,0,0","Homme qui tombe"],
+  ["bvy2#xk!f#","0vry5i5e8b","255,0,0","Chaise roulante"],
+  ["ge-9ep9##u","8_$2tl2d1k","255,0,0","Pelleteuse"], 
+  ["cxus5zni5o","j_h335xqk.","255,0,0","Loupe"],
+  ["@l#gy33##e","664--wcane","255,0,0","Oignon"],
+  ["-7g4pvs80.","ahi3yh-lo_","255,0,0","Briques"]
 ];
 
 function stopWheelZoom(event) {
