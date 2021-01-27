@@ -39,6 +39,8 @@ let casesCouleur = [
    //Animaux
     ["ou.qp#j?q-","mj@7bgjdvy","255,0,0","Chat"],
     ["eqcmr7h3uz","$s?ov-ec_p","255,0,0","Hérissouille"],
+    ["0b-ennb#5_","$s?ov-ec_p","255,0,0","Chamuche"],
+    ["h-ke-.vy!#","q.!wh5-gvn","255,0,0","Tortisson"],
    //Objets sur la tête
     ["$ltd_4l#2z","c_wfg#4yj3","255,0,0","Sceau sur la tête"],
    //Autre
