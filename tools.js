@@ -19,7 +19,8 @@ let casesCouleur = [
   ["x0-#o98eyl","_e#_01sr$x","255,0,0"], // Navo
   ["cp4luiki-f","0cherch@_i","255,0,0"], // Ou est Charlie ?
   ["$pa.dut0o_","la@_dzol3y","255,0,0"], // Laura Felpin
-  ["44uv-n3!b@","?44n0ns@!m","255,0,0"] // Penelope Bagieu
+  ["44uv-n3!b@","?44n0ns@!m","255,0,0"], // Penelope Bagieu
+  ["iw_.w--gl3","dggwitbkak","255,0,0"] // Stormtrooper
 ];
 
 function stopWheelZoom(event) {
