@@ -13,11 +13,19 @@
         <div class="x"><i>x:</i> <span id="tooltip_x">0123456789</span></div>
         <div class="y"><i>y:</i> <span id="tooltip_y">0123456789</span></div>
     </div>
-    <div id="search" style="position: fixed; background: white; z-index: 1; bottom: 0px;">
+    <nav role='navigation'>
+      <ul>
+        <li id="title_menu"><a href="#" onclick="toggleMenu();return false;">Ajouts</a>
+          <ul id="obj_menu">
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id="search" class="gui_el" style="border-top-right-radius:5px;">
       <input type="text" placeholder="x" id="searchX">
       <input type="text" placeholder="y" id="searchY">
       <button onclick="search()">Chercher</button></div>
-      <div id="coord_container" style="position: fixed; background: white; z-index: 1; bottom: 0px; right: 0px;">
+      <div id="coord_container" class="gui_el" style="border-top-left-radius:5px;right: 0px;">
         <span id="coord"></span></div>
     <div class="container">
 
@@ -104,11 +112,29 @@
     <script src="coordinates.js"></script>
     <script src="tools.js"></script>
     <script type="text/javascript">
-    function search() {
-      let xFound = x.indexOf(document.getElementById("searchX").value);
-      let yFound = y.indexOf(document.getElementById("searchY").value);
+    function toggleMenu() {
+      let menu = document.getElementById("obj_menu");
+      if (menu.style.display == "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    }
+    function scrollToXY(xvalue, yvalue) {
+      let xFound = x.indexOf(xvalue);
+      let yFound = y.indexOf(yvalue);
       if (xFound != -1 && yFound != -1) {
-      window.scroll(xFound * 64, yFound * 64);
+        window.scroll(xFound * 64, yFound * 64);
+        return true;
+      }
+      return false;
+    }
+    function search() {
+      let inputX = document.getElementById("searchX");
+      let inputY = document.getElementById("searchY");
+      if (scrollToXY(inputX.value, inputY.value) == true) {
+        inputX.value = '';
+        inputY.value = '';
       }
     }
     </script>
