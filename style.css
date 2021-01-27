@@ -183,7 +183,7 @@ nav ul li a {
 nav ul ul {
   display: none;
   background: #fff;
-  height: 100vh;
+  height: 75vh;
   overflow-y: auto;
   position: relative;
   top: 100%;
