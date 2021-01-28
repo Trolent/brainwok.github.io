@@ -7,7 +7,7 @@ let casesCouleur = [
      ["!r@n#4_een","_e#_0lsr$x","0,255,0","Elephant #2"],
      ["22$v#f_-01","vso#_fub-i","0,255,0","Elephant #3"],
    //3e Recherche
-     ["17a16_!29#","17j?1_696-","0,255,0","Gillet Jaune"],
+     ["17a16_!29#","17j?1_696-","0,255,0","Gilet Jaune"],
    //Refs UBM
      ["unebonnebo","utique_com","0,0,255","Mug UBM"],
      ["x0-#o98eyl","_e#_0lsr$x","0,0,255","Navo"],
