@@ -9,14 +9,14 @@ let casesCouleur = [
    //3e Recherche
      ["17a16_!29#","17j?1_696-","0,255,0","Gillet Jaune"],
    //Refs UBM
-     ["unebonnebo","utique_com","255,0,0","Mug UBM"],
-     ["x0-#o98eyl","_e#_0lsr$x","255,0,0","Navo"],
-     ["cp4luiki-f","0cherch@_i","255,0,0","Charlie"],
-     ["$pa.dut0o_","la@_dzol3y","255,0,0","Laura Felpin"],
-     ["44uv-n3!b@","?44n0ns@!m","255,0,0","Penelope Bagieu"],
+     ["unebonnebo","utique_com","0,0,255","Mug UBM"],
+     ["x0-#o98eyl","_e#_0lsr$x","0,0,255","Navo"],
+     ["cp4luiki-f","0cherch@_i","0,0,255","Charlie"],
+     ["$pa.dut0o_","la@_dzol3y","0,0,255","Laura Felpin"],
+     ["44uv-n3!b@","?44n0ns@!m","0,0,255","Penelope Bagieu"],
     //Team Crafteurs
-     ["gkb#gpj$k_","@gb8u?6$o@","255,0,0","Theo"],
-     ["iw_.w--gl3","9-kuau8ac-","255,0,0","Simon"],
+     ["gkb#gpj$k_","@gb8u?6$o@","0,0,255","Theo"],
+     ["iw_.w--gl3","9-kuau8ac-","0,0,255","Simon"],
    //Incrustations
     // Objets
      ["7g8nolkfs$","#3$r0m-zat","255,0,0","Borne Incendie"],
