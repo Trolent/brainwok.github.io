@@ -136,7 +136,11 @@ function loadMenu() {
   let menu = document.getElementById("obj_menu");
   menu.style.display = "none";
   for (i = 0; i < casesCouleur.length; i++) {
-    menu.insertAdjacentHTML( 'beforeend', "<li><a href=\"#\" onclick=\"scrollToXY(\'"+casesCouleur[i][0]+"\',\'"+casesCouleur[i][1]+"\');return false;\">"+casesCouleur[i][3]+"</a></li>" );
+    if (casesCouleur[i][0] == 1) {
+      menu.insertAdjacentHTML( 'beforeend', "<li id=\"category-title\">"+casesCouleur[i][1]+"</li>");
+    } else {
+      menu.insertAdjacentHTML( 'beforeend', "<li><a href=\"#\" onclick=\"scrollToXY(\'"+casesCouleur[i][0]+"\',\'"+casesCouleur[i][1]+"\');return false;\">"+casesCouleur[i][3]+"</a></li>" );
+    }
   }
 }
 
