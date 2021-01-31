@@ -10,6 +10,8 @@ let casesCouleur = [
      ["17a16_!29#","17j?1_696-","0,255,0","Gilet Jaune"],
      [1, "4e Recherche"],
      ["m?.0u!lag#","_#u3rr-e52","0,255,0","Jean III Sobieski"],
+     [1, "5e Recherche"],
+     ["uc-t!m16$o","sme$61!-ht","0,255,0","Miaouss"],
      [1, "Refs UBM"],
      ["x0-#o98eyl","_e#_0lsr$x","0,0,255","Navo"],
      ["cp4luiki-f","0cherch@_i","0,0,255","Charlie"],
