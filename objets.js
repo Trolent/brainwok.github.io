@@ -62,6 +62,7 @@ let casesCouleur = [
      ["?.n#x203m-","!q2kg_s-4c","255,0,0","Vélociraptor"],
      ["-hpwhhe4$h","bw_!88viml","255,0,0","Crevette"],
      ["44uv-n3!b@","_b_-ev6gt$","255,0,0","Licorne"],
+     ["#y!0@!h#z@","hwf9tgkc6u","255,0,0","Escargot"],
      [1, "Objets sur la tête"],
      ["$ltd_4l#2z","c_wfg#4yj3","255,0,0","Sceau sur la tête"],
      ["7k@z0#zg_n","0cherch@_i","255,0,0","Coupe sur la tête"],
