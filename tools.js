@@ -147,7 +147,7 @@ function loadMenu() {
 function clipboardWrite() {
   navigator.permissions.query({name: "clipboard-write"}).then(result => {
     if (result.state == "granted" || result.state == "prompt") {
-      let toCopy = "\"" + tooltip_x.innerText + "\",\"" + tooltip_y.innerText + "\"";
+      let toCopy = "x: " + tooltip_x.innerText + " | y: " + tooltip_y.innerText;
       navigator.clipboard.writeText(toCopy).then(function() {
         /* clipboard successfully set */
       }, function() {
