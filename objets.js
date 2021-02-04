@@ -20,6 +20,8 @@ let casesCouleur = [
      ["sm@-s.6!4q","d!inf#120?","0,255,0","Pr"],
      [1, "⬇️ Smash 64 120 étoiles"],
      ["x13.lb_0g#","?y@-3xc!0t","0,255,0","Etoile Mario"],
+     [1, "⬇️ 🔁 x contenant 31, y contenant cx3"],
+     ["bl.31c-qp1","cx3-pry1y8","0,255,0","Œil"],
      [1, "⬇️ ???"],
      [1, "  à déterminer"],
      [1, "Refs UBM"],
