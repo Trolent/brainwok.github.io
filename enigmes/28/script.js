@@ -3,7 +3,7 @@
 var canvas = document.getElementById("renderCanvas");
 var engine = new BABYLON.Engine(canvas, true);
 
-engine.loadingUIBackgroundColor = "#4998ff";
+engine.loadingUIBackgroundColor = "#2f2f2f";
 
 var camRig;
 
@@ -76,7 +76,7 @@ var createScene = function () {
 
         camRig = scene.getMeshByName("Cam Rig");
         camRig.rotation = new BABYLON.Vector3(0, 0, 0);
-    
+
         document.addEventListener('mousemove', e => {
             let mouseX = e.pageX / window.innerWidth;
             let mouseY = e.pageY / window.innerHeight;
