@@ -27,7 +27,7 @@ let casesCouleur = [
      [1, "https://bit.ly/br4v0-z-d2"],
      [1, "https://bit.ly/objetdumail"],
      [1, "⬇️ à retrouver "],
-     ["47_47o79#8","s.2!691@86","0,255,0",""],
+     ["47_47o79#8","s.2!691@86","0,255,0","Image Google Drive"],
      [1, "↪️ Coordonnées Gmaps 47.470798 5.269186"],
      [1, "↪️ Objet du mail = Grotte de Bèze"],
      [1, "Refs UBM"],
