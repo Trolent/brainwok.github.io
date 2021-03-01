@@ -85,9 +85,9 @@ function decrypt() {
       console.log("[Code] César 10, alphabet02: " + code)
   }
   console.log("[Alphabet03] " + abc3)
-  alphabet03 = swap(abc3, ftitre[0], ftitre[1])
+  abc3 = swap(abc3, ftitre[0], ftitre[1])
   console.log("[Alphabet03] Swap ["+ftitre[0]+">"+ftitre[1]+"]: " + abc3)
-  alphabet03 = swap(abc3, ftitre[2], ftitre[3])
+  abc3 = swap(abc3, ftitre[2], ftitre[3])
   console.log("[Alphabet03] Swap ["+ftitre[2]+">"+ftitre[3]+"]: " + abc3)
   code = cesar(code, 8, abc3)
   console.log("[Code] César 8, alphabet03: " + code);
