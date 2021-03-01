@@ -63,7 +63,7 @@ function decrypt() {
       // 'U' devient 'm'
       code = cesar(code, 7, alphabet01)
   } else {
-      code.swap(code, 'g', 'm')
+      code = swap(code, 'g', 'm')
       code = cesar(code, 10, alphabet02)
   }
 
