@@ -1,6 +1,6 @@
-var alphabet01 = 'UdZ7FvkX1fmqx@hSs3wJip09IQaNPDHn!$M6gVAtTeoB?O8W4j2GEYruRybcLK5_Clz'
-var alphabet02 = '?tBGbfkLel_jqKWhNY4ZSIH7TFc!uaxX3vn628dzEUP9Cw@DgoryR05Mis1Op$QJAmV'
-var alphabet03 = 'Y!ON7BADZhGXbskgaK_WT1w5QVq2CEyrv3zRLJjm9neUStlIducMpiF80$4?HxP6@fo'
+let alphabet01 = 'UdZ7FvkX1fmqx@hSs3wJip09IQaNPDHn!$M6gVAtTeoB?O8W4j2GEYruRybcLK5_Clz'
+let alphabet02 = '?tBGbfkLel_jqKWhNY4ZSIH7TFc!uaxX3vn628dzEUP9Cw@DgoryR05Mis1Op$QJAmV'
+let alphabet03 = 'Y!ON7BADZhGXbskgaK_WT1w5QVq2CEyrv3zRLJjm9neUStlIducMpiF80$4?HxP6@fo'
 
 Number.prototype.mod = function(n) {
     return ((this%n)+n)%n;
@@ -60,6 +60,9 @@ function decrypt() {
   var bdate = document.getElementById("bday").value.split('/');
   var bday = parseInt(bdate[0], 10);
   var bmonth = parseInt(bdate[1], 10);
+  var abc1 = alphabet01;
+  var abc2 = alphabet02;
+  var abc3 = alphabet03;
 
   console.log("Code: " + code + ", Film: " + ftitre + ", Genre: " + fgenre + ", Toby: " + toby+ ", Anniv.: " + bday + "/" + bmonth + ", Lat: " + poslat + ", Vac: " + vac);
   console.log("[Code] " + code);
@@ -74,19 +77,19 @@ function decrypt() {
       code = swap(code, 'g', 't')
       console.log("[Code] Swap [g->t]: " + code);
       // 'U' devient 'm'
-      code = cesar(code, 7, alphabet01)
+      code = cesar(code, 7, abc1)
       console.log("[Code] César 7, alphabet01: " + code);
   } else {
       code = swap(code, 'g', 'm')
-      code = cesar(code, 10, alphabet02)
+      code = cesar(code, 10, abc2)
       console.log("[Code] César 10, alphabet02: " + code)
   }
-  console.log("[Alphabet03] " + alphabet03)
-  alphabet03 = swap(alphabet03, ftitre[0], ftitre[1])
-  console.log("[Alphabet03] Swap ["+ftitre[0]+">"+ftitre[1]+"]: " + alphabet03)
-  alphabet03 = swap(alphabet03, ftitre[2], ftitre[3])
-  console.log("[Alphabet03] Swap ["+ftitre[2]+">"+ftitre[3]+"]: " + alphabet03)
-  code = cesar(code, 8, alphabet03)
+  console.log("[Alphabet03] " + abc3)
+  alphabet03 = swap(abc3, ftitre[0], ftitre[1])
+  console.log("[Alphabet03] Swap ["+ftitre[0]+">"+ftitre[1]+"]: " + abc3)
+  alphabet03 = swap(abc3, ftitre[2], ftitre[3])
+  console.log("[Alphabet03] Swap ["+ftitre[2]+">"+ftitre[3]+"]: " + abc3)
+  code = cesar(code, 8, abc3)
   console.log("[Code] César 8, alphabet03: " + code);
 
   if(toby < 4) {
@@ -95,18 +98,18 @@ function decrypt() {
   }
 
   poslat = Math.round(poslat);
-  console.log("Code: " + code + ", Alphabet: "+ alphabet02 + ", Key: "+ poslat)
-  console.log(vigenere(code, alphabet02, poslat));
-  code = vigenere(code, alphabet02, poslat)
+  console.log("Code: " + code + ", Alphabet: "+ abc2 + ", Key: "+ poslat)
+  console.log(vigenere(code, abc2, poslat));
+  code = vigenere(code, abc2, poslat)
   console.log("[Code] Vigenere Alphabet02, Key=" + poslat + ": " + code);
   if(bday < 15) {
       code = swapcase(code)
       console.log("[Code] Swapcase: " + code);
-      code = cesar(code, bmonth, alphabet01)
+      code = cesar(code, bmonth, abc1)
       console.log("[Code] César " + bmonth + ", alphabet01: " + code);
   }
 
-  code = vigenere(code, alphabet02, vac.toUpperCase())
+  code = vigenere(code, abc2, vac.toUpperCase())
   console.log("[Code] Vigenere Alphabet02, Key= " + vac.toUpperCase() + ": " + code);
   document.getElementById("result").value = code;
 }
