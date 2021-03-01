@@ -7,18 +7,15 @@ Number.prototype.mod = function(n) {
 };
 
 function vigenere(input, alphabet, key) {
-  let output = ""
+  let output = "";
   let indexBefore;
   let indexAfter;
   let inputL = input.length;
   let keyL = key.length;
   let abcL = alphabet.length;
-  let longest = (inputL > keyL) ? inputL : keyL;
-  for (var i = 0; i < longest; i++) {
-    indexBefore = (alphabet.indexOf(input[i.mod(input.length)]) - alphabet.indexOf(key[i.mod(key.length)]));
+  for (var i = 0; i < inputL; i++) {
+    indexBefore = (alphabet.indexOf(input[i.mod(inputL)]) - alphabet.indexOf(key[i.mod(keyL)]));
     indexAfter = (indexBefore.mod(abcL));
-    console.log(indexBefore + ">" + indexAfter);
-    console.log();
     output += alphabet[indexAfter];
   }
   return output;
@@ -93,11 +90,13 @@ function decrypt() {
   console.log("[Code] César 8, alphabet03: " + code);
 
   if(toby < 4) {
-      code = swapcase(code)
+      code = swapcase(code);
       console.log("[Code] SwapCase: " + code);
   }
 
-  poslat = Math.round(poslat)
+  poslat = Math.round(poslat);
+  console.log("Code: " + code + ", Alphabet: "+ alphabet02 + ", Key: "+ poslat)
+  console.log(vigenere(code, alphabet02, poslat));
   code = vigenere(code, alphabet02, poslat)
   console.log("[Code] Vigenere Alphabet02, Key=" + poslat + ": " + code);
   if(bday < 15) {
