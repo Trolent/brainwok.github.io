@@ -1,0 +1,97 @@
+<html>
+<head>
+  <title>Decryptor3000</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="./decryptor.js"></script>
+</head>
+<body>
+  <form class="form-horizontal" onsubmit="return false">
+  <fieldset>
+
+  <!-- Form Name -->
+  <legend></legend>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="codeinput">Code</label>
+    <div class="col-md-4">
+    <input id="codeinput" name="codeinput" type="text" value="74AZbSG$qRYrAU_84!LBez@0aP5-gxio$Mp" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="titrefilm">Film préféré</label>
+    <div class="col-md-4">
+    <input id="titrefilm" name="titrefilm" type="text" placeholder="Titre Français" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="genrefilm"></label>
+    <div class="col-md-4">
+    <input id="genrefilm" name="genrefilm" type="text" placeholder="Genre" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="toby">Toby</label>
+    <div class="col-md-4">
+    <input id="toby" name="toby" type="text" placeholder="Nombre de pattes" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="bday">Anniversaire</label>
+    <div class="col-md-4">
+    <input id="bday" name="bday" type="text" placeholder="JJ/MM" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="pos">Position</label>
+    <div class="col-md-4">
+    <input id="pos" name="pos" type="text" placeholder="Latitude" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="vac">Vacances 2018</label>
+    <div class="col-md-4">
+    <input id="vac" name="vac" type="text" placeholder="Ville" class="form-control input-md" required="">
+
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="decrypt"></label>
+    <div class="col-md-4">
+      <button id="decrypt_btn" name="decrypt_btn" class="btn btn-primary" onclick="return decrypt();return false;">Decrypter</button>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="result">Résultat</label>
+    <div class="col-md-4">
+    <input id="result" name="result" type="text" placeholder="" class="form-control input-md" disabled>
+
+    </div>
+  </div>
+
+  </fieldset>
+  </form>
+</body>
+</html>
