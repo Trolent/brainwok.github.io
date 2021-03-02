@@ -17,7 +17,6 @@
     <label class="col-md-4 control-label" for="codeinput">Code</label>
     <div class="col-md-4">
     <input id="codeinput" name="codeinput" type="text" value="74AZbSG$qRYrAU_84!LBez@0aP5-gxio$Mp" class="form-control input-md">
-
     </div>
   </div>
 
@@ -25,8 +24,18 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="titrefilm">Film préféré</label>
     <div class="col-md-4">
+      <label class="checkbox-inline" for="checkboxes-0">
+        <input type="checkbox" name="imdb" id="imdb" onchange='toggleIMDb(this);'>
+        Liste IMDb
+      </label>
+    </div>
+    <div class="col-md-4" id="divtitre">
     <input id="titrefilm" name="titrefilm" type="text" placeholder="Titre Français" class="form-control input-md" required="">
+    </div>
+    <div class="col-md-4" id="divimdb" style="display: none;">
+      <select id="movieselect" name="movieselect" class="form-control" onchange="changeMovie(this);">
 
+      </select>
     </div>
   </div>
 
@@ -94,5 +103,54 @@
 
   </fieldset>
   </form>
+  <script>
+  let movies = [
+    ["WarGames (1983)"],
+    ["Matrix Reloaded (2003)"],
+    ["Love Actually (2003)"],
+    ["Die Hard 4 : Retour en enfer (2007)"],
+    ["La Nuit des masques (1978)"],
+    ["Hackers (1995)"],
+    ["Code 77 (2009)"],
+    ["Ultimate Game (2009)"],
+    ["TRON : L'Héritage (2010)"],
+    ["Les Griffes de la nuit (1984)"],
+    ["V pour vendetta (2005)"],
+    ["Le Seigneur des anneaux : Le Retour du roi (2003)"],
+    ["Pulp Fiction (1994)"],
+    ["Expendables: Unité spéciale (2010)"],
+    ["Opération Espadon (2001)"],
+    ["Braquage à l'italienne (2003)"]
+  ];
+
+  function getMovies() {
+    let movieselect = document.getElementById("movieselect");
+    for (var i = 0; i < movies.length; i++) {
+      let opt = document.createElement("option");
+      opt.value = movies[i][0];
+      opt.text = movies[i][0];
+      movieselect.add(opt);
+    }
+  }
+
+  function changeMovie(selector) {
+     document.getElementById("titrefilm").value = selector.value;
+  }
+
+  function toggleIMDb(checkbox) {
+    let divtitre = document.getElementById("divtitre");
+    let divimdb = document.getElementById("divimdb");
+    if (checkbox.checked == true) {
+      divimdb.style.display = "block";
+      divtitre.style.display = "none";
+      changeMovie(document.getElementById("movieselect"));
+    } else {
+      divimdb.style.display = "none";
+      divtitre.style.display = "block";
+    }
+  }
+
+  getMovies();
+  </script>
 </body>
 </html>
