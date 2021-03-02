@@ -88,7 +88,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="decrypt"></label>
     <div class="col-md-4">
-      <button id="decrypt_btn" name="decrypt_btn" class="btn btn-primary" onclick="return decrypt();return false;">Decrypter</button>
+      <button id="decrypt_btn" name="decrypt_btn" class="btn btn-primary" onclick="return runDecryptor();return false;">Decrypter</button>
     </div>
   </div>
 
@@ -96,14 +96,13 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="result">Résultat</label>
     <div class="col-md-4">
-    <input id="result" name="result" type="text" placeholder="" class="form-control input-md" disabled>
-
+      <textarea class="form-control" id="result" name="result" disabled></textarea>
     </div>
   </div>
-
   </fieldset>
   </form>
   <script>
+  let tryhard = 0;
   let movies = [
     ["WarGames (1983)"],
     ["Matrix Reloaded (2003)"],
@@ -147,6 +146,17 @@
     } else {
       divimdb.style.display = "none";
       divtitre.style.display = "block";
+    }
+  }
+
+  function runDecryptor() {
+    if (tryhard == 1) {
+      for (var i = 0; i < 91; i++) {
+        document.getElementById("pos").value = i.toString();
+        document.getElementById("result").value += (decrypt() + "\n");
+      }
+    } else {
+      document.getElementById("result").value = decrypt();
     }
   }
 

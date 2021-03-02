@@ -111,5 +111,5 @@ function decrypt() {
 
   code = vigenere(code, abc2, vac.toUpperCase())
   console.log("[Code] Vigenere Alphabet02, Key= " + vac.toUpperCase() + ": " + code);
-  document.getElementById("result").value = code;
+  return code;
 }
