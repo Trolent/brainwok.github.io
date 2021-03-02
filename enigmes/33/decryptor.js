@@ -97,7 +97,7 @@ function decrypt() {
       console.log("[Code] SwapCase: " + code);
   }
 
-  poslat = Math.round(poslat);
+  poslat = Math.round(poslat).toString();
   console.log("Code: " + code + ", Alphabet: "+ abc2 + ", Key: "+ poslat)
   console.log(vigenere(code, abc2, poslat));
   code = vigenere(code, abc2, poslat)
