@@ -151,6 +151,7 @@
 
   function runDecryptor() {
     if (tryhard == 1) {
+      document.getElementById("result").value = "";
       for (var i = 0; i < 91; i++) {
         document.getElementById("pos").value = i.toString();
         document.getElementById("result").value += (decrypt() + "\n");
