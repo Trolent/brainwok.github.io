@@ -1,9 +1,13 @@
 body {
-  background-color: #2f2f2f;
-  color: white;
+  margin: 0;
+  background: #0e0f11;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+#logo {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.carousel-tile {
+  border-radius: 5px;
 }
