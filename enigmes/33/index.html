@@ -9,7 +9,7 @@
   <canvas></canvas>
   <form class="form-horizontal" onsubmit="return false">
   <div id="logo">
-    <img id="logo_img" src="logo.png">
+    <img id="logo_img" src="logo.gif">
   </div>
   <fieldset>
 
@@ -285,5 +285,19 @@
       background-color: #005c00;
   }
   </style>
+  <audio id="keygen_music" controls style="float: right;">
+      <source src="keygenmusic.mp3">
+  </audio>
+  <script>
+  let audio = document.getElementById("keygen_music");
+  let playing = false;
+  document.addEventListener('click', (e) => {
+    if (!playing) {
+      audio.play();
+      audio.loop = true;
+      playing = true;
+    }
+  });
+  </script>
 </body>
 </html>
