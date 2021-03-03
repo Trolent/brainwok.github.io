@@ -13,10 +13,16 @@ function vigenere(input, alphabet, key) {
   let inputL = input.length;
   let keyL = key.length;
   let abcL = alphabet.length;
+  let j = 0;
   for (var i = 0; i < inputL; i++) {
-    indexBefore = (alphabet.indexOf(input[i.mod(inputL)]) - alphabet.indexOf(key[i.mod(keyL)]));
-    indexAfter = (indexBefore.mod(abcL));
-    output += alphabet[indexAfter];
+    if (!alphabet.includes(input[i])) {
+      output += input[i];
+      j++;
+    } else {
+      indexBefore = (alphabet.indexOf(input[i]) + alphabet.indexOf(key[(i - j).mod(keyL)]));
+      indexAfter = (indexBefore.mod(abcL));
+      output += alphabet[indexAfter];
+    }
   }
   return output;
 }
