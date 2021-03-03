@@ -31,7 +31,7 @@ function cesar(str, key, alphabet) {
   var newstr = "";
   for (var j = 0; j < str.length; j++) {
     for (var i = 0; i < alphabet.length; i++) {
-      if (str[j] == alphabet[(i  - key).mod(alphabet.length)]) {
+      if (str[j] == alphabet[(i - key).mod(alphabet.length)]) {
         newstr += alphabet[i];
         break;
       }
@@ -62,7 +62,7 @@ function swapcase(str) {
 function decrypt() {
   var poslat = document.getElementById("pos").value;
   var ftitre = document.getElementById("titrefilm").value.toLowerCase();
-  var fgenre = document.getElementById("genrefilm").value.toLowerCase();
+  var horreur = document.getElementById("horreur").checked;
   var vac = document.getElementById("vac").value;
   var toby = parseInt(document.getElementById("toby").value, 10);
   var code = document.getElementById("codeinput").value;
@@ -73,14 +73,13 @@ function decrypt() {
   var abc2 = alphabet02;
   var abc3 = alphabet03;
 
-  console.log("Code: " + code + ", Film: " + ftitre + ", Genre: " + fgenre + ", Toby: " + toby+ ", Anniv.: " + bday + "/" + bmonth + ", Lat: " + poslat + ", Vac: " + vac);
+  console.log("Code: " + code + ", Film: " + ftitre + ", Horreur: " + horreur + ", Toby: " + toby+ ", Anniv.: " + bday + "/" + bmonth + ", Lat: " + poslat + ", Vac: " + vac);
   console.log("[Code] " + code);
   code = swapcase(code);
   console.log("[Code] SwapCase: " + code);
   code = swap(code, ftitre[0], 's');
   console.log("[Code] Swap ["+ftitre[0]+">s]: " + code);
-
-  if(fgenre == 'horreur') {
+  if(horreur) {
       // Remplace tous les g minuscules par des t minuscules,
       // et inversement
       code = swap(code, 'g', 't')

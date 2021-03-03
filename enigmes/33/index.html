@@ -41,10 +41,11 @@
 
   <!-- Text input-->
   <div class="form-group">
-    <label class="col-md-4 control-label" for="genrefilm"></label>
     <div class="col-md-4">
-    <input id="genrefilm" name="genrefilm" type="text" placeholder="Genre" class="form-control input-md" required="">
-
+      <label class="checkbox-inline" for="horreur">
+        <input type="checkbox" name="horreur" id="horreur">
+            Horreur
+        </label>
     </div>
   </div>
 
@@ -152,7 +153,7 @@
   function runDecryptor() {
     if (tryhard == 1) {
       document.getElementById("result").value = "";
-      for (var i = 0; i < 91; i++) {
+      for (var i = -90; i < 91; i++) {
         document.getElementById("pos").value = i.toString();
         document.getElementById("result").value += i.toString() + ": " + (decrypt() + "\n");
       }
