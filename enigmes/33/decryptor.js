@@ -25,9 +25,12 @@ function cesar(str, key, alphabet) {
   var newstr = "";
   for (var j = 0; j < str.length; j++) {
     for (var i = 0; i < alphabet.length; i++) {
-      if (str[j] == alphabet[(i  + key) % alphabet.length]) {
+      if (str[j] == alphabet[(i  - key).mod(alphabet.length)]) {
         newstr += alphabet[i];
         break;
+      }
+      if (i == alphabet.length - 1) {
+        newstr += str[j];
       }
     }
   }
