@@ -106,8 +106,6 @@ function decrypt() {
   }
 
   poslat = Math.round(poslat).toString();
-  console.log("Code: " + code + ", Alphabet: "+ abc2 + ", Key: "+ poslat)
-  console.log(vigenere(code, abc2, poslat));
   code = vigenere(code, abc2, poslat)
   console.log("[Code] Vigenere Alphabet02, Key=" + poslat + ": " + code);
   if(bday < 15) {

@@ -88,7 +88,7 @@
   <!-- Button -->
   <div class="form-group">
     <label class="col-md-4 control-label" for="decrypt"></label>
-    <div class="col-md-4">
+    <div class="col-md-4" id="decrypt_div">
       <button id="decrypt_btn" name="decrypt_btn" class="btn btn-primary" onclick="return runDecryptor();return false;">Decrypter</button>
     </div>
   </div>
@@ -177,17 +177,22 @@
     background: black;
     margin: 0 auto;
   }
-@media (max-width: 767.98px) {
-  .form-horizontal {
-    width: 100% !important;
-  }
- }
 
- @media (min-width: 768px) and (max-width: 991.98px) {
-   .form-horizontal {
-     width: 60% !important;
+   @media (max-width: 767.98px) {
+     .form-horizontal {
+       width: 100% !important;
+     }
    }
-}
+
+   @media (min-width: 768px) and (max-width: 991.98px) {
+     .form-horizontal {
+       width: 60% !important;
+     }
+   }
+
+   #decrypt_div {
+    text-align: center;
+   }
 
   .col-md-4 {
     -ms-flex: 0 0 33.333333%;
@@ -207,7 +212,7 @@
       border: none;
   }
 
-  .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle, .btn-primary:hover {
+  .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle, .btn-primary:hover, .btn-primary:focus {
       background-color: #005c00;
       color: white;
   }
