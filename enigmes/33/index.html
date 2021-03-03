@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Decryptor3000</title>
+  <title>DECRYPTOR3000</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <script src="./decryptor.js"></script>
   <link rel="icon" type="image/png" href="../../favicon.png"/>
@@ -101,7 +101,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="result">Résultat</label>
     <div class="col-md-4">
-      <textarea class="form-control" id="result" name="result" disabled></textarea>
+      <input class="form-control" id="result" name="result" disabled></input>
     </div>
   </div>
   </fieldset>
@@ -144,8 +144,8 @@
 
   setInterval(draw, 50);
 
-  let tryhard = 0;
   let movies = [
+    ["Braquage à l'italienne (2003)"],
     ["WarGames (1983)"],
     ["Matrix Reloaded (2003)"],
     ["Love Actually (2003)"],
@@ -160,8 +160,7 @@
     ["Le Seigneur des anneaux : Le Retour du roi (2003)"],
     ["Pulp Fiction (1994)"],
     ["Expendables: Unité spéciale (2010)"],
-    ["Opération Espadon (2001)"],
-    ["Braquage à l'italienne (2003)"]
+    ["Opération Espadon (2001)"]
   ];
 
   function getMovies() {
@@ -192,15 +191,7 @@
   }
 
   function runDecryptor() {
-    if (tryhard == 1) {
-      document.getElementById("result").value = "";
-      for (var i = -90; i < 91; i++) {
-        document.getElementById("pos").value = i.toString();
-        document.getElementById("result").value += i.toString() + ": " + (decrypt() + "\n");
-      }
-    } else {
-      document.getElementById("result").value = decrypt();
-    }
+    document.getElementById("result").value = decrypt();
   }
 
   getMovies();

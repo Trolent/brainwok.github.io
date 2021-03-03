@@ -73,49 +73,32 @@ function decrypt() {
   var abc2 = alphabet02;
   var abc3 = alphabet03;
 
-  console.log("Code: " + code + ", Film: " + ftitre + ", Horreur: " + horreur + ", Toby: " + toby+ ", Anniv.: " + bday + "/" + bmonth + ", Lat: " + poslat + ", Vac: " + vac);
-  console.log("[Code] " + code);
   code = swapcase(code);
-  console.log("[Code] SwapCase: " + code);
   code = swap(code, ftitre[0], 's');
-  console.log("[Code] Swap ["+ftitre[0]+">s]: " + code);
-  if(horreur) {
+  if (horreur) {
       // Remplace tous les g minuscules par des t minuscules,
       // et inversement
       code = swap(code, 'g', 't')
-      console.log("[Code] Swap [g->t]: " + code);
-      // 'U' devient 'm'
       code = cesar(code, 7, abc1)
-      console.log("[Code] César 7, alphabet01: " + code);
   } else {
       code = swap(code, 'g', 'm')
       code = cesar(code, 10, abc2)
-      console.log("[Code] César 10, alphabet02: " + code)
   }
-  console.log("[Alphabet03] " + abc3)
   abc3 = swap(abc3, ftitre[0], ftitre[1])
-  console.log("[Alphabet03] Swap ["+ftitre[0]+">"+ftitre[1]+"]: " + abc3)
   abc3 = swap(abc3, ftitre[2], ftitre[3])
-  console.log("[Alphabet03] Swap ["+ftitre[2]+">"+ftitre[3]+"]: " + abc3)
   code = cesar(code, 8, abc3)
-  console.log("[Code] César 8, alphabet03: " + code);
 
   if(toby < 4) {
       code = swapcase(code);
-      console.log("[Code] SwapCase: " + code);
   }
 
   poslat = Math.round(poslat).toString();
   code = vigenere(code, abc2, poslat)
-  console.log("[Code] Vigenere Alphabet02, Key=" + poslat + ": " + code);
   if(bday < 15) {
       code = swapcase(code)
-      console.log("[Code] Swapcase: " + code);
       code = cesar(code, bmonth, abc1)
-      console.log("[Code] César " + bmonth + ", alphabet01: " + code);
   }
 
   code = vigenere(code, abc2, vac.toUpperCase())
-  console.log("[Code] Vigenere Alphabet02, Key= " + vac.toUpperCase() + ": " + code);
   return code;
 }
