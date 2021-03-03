@@ -169,7 +169,30 @@
       font-family: 'Courier Prime', Courier, monospace;
       color: #00FF00;
       font-weight: 700;
-      background-color: black;
+      background: #000000 url("matrix.jpg") repeat-x fixed 0 0;
+  }
+
+  .form-horizontal {
+    width: 30%;
+    background: black;
+    margin: 0 auto;
+  }
+@media (max-width: 767.98px) {
+  .form-horizontal {
+    width: 100% !important;
+  }
+ }
+
+ @media (min-width: 768px) and (max-width: 991.98px) {
+   .form-horizontal {
+     width: 50% !important;
+   }
+}
+
+  .col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .form-control, .form-control:disabled, .form-control:focus, .form-control:active {
