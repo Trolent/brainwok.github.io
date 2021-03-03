@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" href="../../favicon.png"/>
 </head>
 <body>
+  <canvas></canvas>
   <form class="form-horizontal" onsubmit="return false">
   <div id="logo">
     <img id="logo_img" src="logo.png">
@@ -106,6 +107,43 @@
   </fieldset>
   </form>
   <script>
+  var canvas = document.querySelector('canvas'),
+      ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+
+  var letters = 'DECRYPTOR3000';
+  letters = letters.split('');
+
+  var fontSize = 10,
+      columns = canvas.width / fontSize;
+
+  var drops = [];
+  for (var i = 0; i < columns; i++) {
+    drops[i] = 1;
+  }
+
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    for (var i = 0; i < drops.length; i++) {
+      var text = letters[(drops[i] + 3*i) % letters.length];
+      ctx.fillStyle = '#0f0';
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      drops[i]++;
+      if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
+        drops[i] = 0;
+      }
+    }
+  }
+  window.onresize = resize;
+
+  setInterval(draw, 50);
+
   let tryhard = 0;
   let movies = [
     ["WarGames (1983)"],
@@ -172,9 +210,14 @@
       font-family: 'Courier Prime', Courier, monospace;
       color: #00FF00;
       font-weight: 700;
-      background: #000000 url("matrix.jpg") repeat-x fixed 0 0;
+      background: #000000;
   }
 
+  canvas {
+    display: block;
+    position: fixed;
+    z-index: -1;
+  }
   .form-group {
       margin-bottom: 0.5rem;
   }
