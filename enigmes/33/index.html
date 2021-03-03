@@ -29,7 +29,8 @@
     <label class="col-md-4 control-label" for="titrefilm">Film préféré</label>
     <div class="col-md-4">
       <label class="checkbox-inline" for="imdb">
-        <input type="checkbox" name="imdb" id="imdb" onchange='toggleIMDb(this);'>
+        <img src="unchecked.png" id="imdbImg">
+        <input type="checkbox" name="imdb" id="imdb" hidden onchange='toggleIMDb(this);'>
         Liste IMDb
       </label>
     </div>
@@ -47,7 +48,8 @@
   <div class="form-group">
     <div class="col-md-4">
       <label class="checkbox-inline" for="horreur">
-        <input type="checkbox" name="horreur" id="horreur">
+        <img src="unchecked.png" id="horrorImg">
+        <input type="checkbox" name="horreur" hidden id="horreur" onchange="toggleHorror(this);">
             Horreur
         </label>
     </div>
@@ -184,11 +186,25 @@
       divimdb.style.display = "block";
       divtitre.style.display = "none";
       changeMovie(document.getElementById("movieselect"));
+      document.getElementById('imdbImg').src = "checked.png";
     } else {
       divimdb.style.display = "none";
       divtitre.style.display = "block";
+      document.getElementById('imdbImg').src = "unchecked.png";
     }
   }
+
+  function toggleHorror(checkbox) {
+    if (checkbox.checked == true) {
+      document.getElementById('horrorImg').src = "checked.png";
+    } else {
+      document.getElementById('horrorImg').src = "unchecked.png";
+    }
+  }
+
+
+  toggleIMDb(document.getElementById('imdb')); // Update on startup if needed
+  toggleHorror(document.getElementById('horreur'));
 
   function runDecryptor() {
     document.getElementById("result").value = decrypt();
