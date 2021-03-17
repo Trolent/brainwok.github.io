@@ -1,4 +1,7 @@
 let casesCouleur = [
+   //Poil Enigme 35
+     [1, "Enigme 35"],
+     ["22$v#f_-01","#d2w6q7yn#",0,255,255,"Poil"],
    //A trouver pour l'énigme
      [1, "Trouvez Kyan"],
      ["m48_303837","4.072ap406","0,255,0","Kyan"],
